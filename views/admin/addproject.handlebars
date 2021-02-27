@@ -1,0 +1,20 @@
+{{#each error}}
+  <div class="alert alert-danger">
+    {{text}}
+  </div>
+{{/each}}
+
+<h2>New Project</h2>
+
+<div class="card">
+    <div class="card-body">
+    <form action="/admin/projects/confirmation" method="post">
+    <label for="title">Title: </label>
+        <input type="text" name="title" id="title" placeholder="Title of Project" class="form-control">
+    <label for="code">Code:</label>
+        <textarea name="code" id="code" class="form-control" cols="1" rows="20"></textarea>
+        <br>
+    <button type="submit" class="btn btn-success">Add Code</button>
+</form>
+</div>
+</div>

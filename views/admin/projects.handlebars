@@ -1,0 +1,16 @@
+<h2>List of Projects</h2>
+<hr>
+<a href="/admin/projects/new"><button class="btn btn-success mt-2">New Project</button></a>
+
+{{#each code}}
+  <div class="card mt-2">
+    <div class="card-body">
+      <h4>{{title}}</h4>
+      <a href="/admin/projects/edit/{{_id}}"><button class="btn btn-success" >Edit code</button></a>
+      <form class="" action="/admin/project/delete" method="post">
+        <input type="hidden" name="id" value="{{_id}}">
+        <button type="submit" class="btn btn-success mt-2">Delete</button>
+      </form>
+    </div>
+  </div>
+{{/each}}
