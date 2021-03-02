@@ -15,7 +15,7 @@ require("./config/auth")(passport);
 //Config
 //Session
   app.use(session ({
-    secret: "aGbiru120",
+    secret: "Your Secret Here",
     resave: true,
     saveUninitialized: true
   }));
@@ -36,7 +36,7 @@ require("./config/auth")(passport);
   app.use(bodyParser.json());
 
 //MogonDB
-  const uri = "mongodb+srv://Gabriel:aGbiru120@projects.kgb2h.mongodb.net/projects?retryWrites=true&w=majority";
+  const uri = "mongodb+srv://<username>:<password>@projects.kgb2h.mongodb.net/projects?retryWrites=true&w=majority";
   mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 //Handlebars
   app.engine('handlebars', handlebars({defaultLayout: 'main'}));
